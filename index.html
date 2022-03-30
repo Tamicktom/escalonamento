@@ -141,6 +141,12 @@
 						<div><img src="imagens/diagrama-2.svg"></div>
 					</div>
 				</section>
+				<section data-auto-animate>
+					<h2 style="color:#42affa; font-size:1em; margin-bottom:75px;">Escalonamento por Fração Justa</h2>
+					<div>
+						<img src="imagens/fracao_justa.svg" alt="" srcset="">
+					</div>
+				</section>
 			</section>
 			<section>
 				<h2 style="color:#42affa;">Conclusão</h2>
@@ -151,9 +157,13 @@
 			</section>
 			<section>
 				<h2 style="color:#42affa;">Bibliografia</h2>
-				<p><strong>TANENBAUM</strong>, Andrew. <strong>Sistemas Operacionais Modernos</strong>. 4. ed. São
+				<p style="font-size:0.7em;"><strong>TANENBAUM</strong>, Andrew. <strong>Sistemas Operacionais
+						Modernos</strong>. 4. ed. São
 					Paulo: Elsevier, 2015. 778 p.
 				</p>
+				<p style="font-size:0.7em;">Sem autor. <strong>CFS Scheduler - The Linux Kernel</strong>. Disponível em:
+					&#60;https://www.kernel.org/doc/html/latest/scheduler/sched-design-CFS.html&#62;. Acesso em 26 mar.
+					2022</p>
 			</section>
 			<section>
 				<section data-auto-animate>
@@ -186,6 +196,7 @@
 	<script src="plugin/notes/notes.js"></script>
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -194,7 +205,7 @@
 			hash: true,
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
 		});
 		var sorteado = 0;
 		function sortearNumeros() {
