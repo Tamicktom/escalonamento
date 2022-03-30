@@ -87,7 +87,7 @@
 							<button class="myButton" onclick="sortearNumeros()" style="transition:all 0.7s">Gerar
 								Sorteio</button>
 						</div>
-						<div>
+						<div id="pieBilhetes">
 							<img src="imagens/diagrama-1.svg">
 						</div>
 					</div>
@@ -144,7 +144,7 @@
 				<section data-auto-animate>
 					<h2 style="color:#42affa; font-size:1em; margin-bottom:75px;">Escalonamento por Fração Justa</h2>
 					<div>
-						<img src="imagens/fracao_justa.svg" alt="" srcset="">
+						<img onclick="changeImg(this)" src="imagens/fracao_justa.svg" alt="" srcset="">
 					</div>
 				</section>
 			</section>
@@ -208,6 +208,7 @@
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
 		});
 		var sorteado = 0;
+		let imgToggle = false;
 		function sortearNumeros() {
 			if (sorteado != 0) {
 				document.querySelector('#numeros_sorteados').innerHTML = ` `;
@@ -242,6 +243,16 @@
 				return `<span style="color:#affa42">${num}</span>`;
 			}
 			return `<span style="color:#42affa">${num}</span>`;
+		}
+		function changeImg(obj) {
+			if (imgToggle == false) {
+				obj.src = "imagens/fracao_justa_2.svg";
+				imgToggle = true;
+			}
+			else {
+				obj.src = "imagens/fracao_justa.svg"
+				imgToggle = false;
+			}
 		}
 		//sortearNumeros();
 	</script>
